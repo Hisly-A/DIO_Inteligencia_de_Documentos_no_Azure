@@ -105,6 +105,13 @@ Entidades
 Detalhes da imagem
 Referências de imagem
 
+Se aparecer um aviso solicitando uma **Storage Account Connection String**, clique em **Select Choose an existing connection**. 
+
+Escolha a conta de armazenamento criada anteriormente.
+Clique em **+ Container** para criar um novo contêiner chamado **knowledge-store** com o nível de privacidade definido como **Private**, e clique em **Create**.
+
+Selecione o contêiner knowledge-store, e clique em `Select`.
+
 Em **Azure blob projections** selecione **Documento**.
 
 Clique em ```Next: Customize target index``` e no campo **Index name** preencha **coffee-index**.
@@ -174,7 +181,7 @@ Selecione qualquer um dos itens e clique no arquivo **objectprojection.json**.
 
 Clique em ```Edit``` para ver o JSON produzido para um dos documentos do seu armazenamento de dados do Azure.
 
-Retornando em **Containers**, selecione o contêiner coffee-skillset-image-projection. Selecione qualquer um dos itens e qualquer um dos arquivos *.jpg*. Clique em ```Edit``` para ver a imagem armazenada no documento.
+Retornando em **Containers**, clique no contêiner **coffee-skillset-image-projection**. Selecione qualquer um dos itens e qualquer um dos arquivos *.jpg*. Clique em ```Edit``` para ver a imagem armazenada no documento.
 
 Selecione a localização atual do blob de armazenamento no canto superior esquerdo da tela para retornar à conta de armazenamento **Containers**.
 
