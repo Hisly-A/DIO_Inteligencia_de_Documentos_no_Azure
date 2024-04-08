@@ -9,64 +9,188 @@ Azure Cognitive Search: Utilizando AI Search para indexação e consulta de Dado
 
 
 ## Criação do recurso do Azure AI Search
-Entre no portal do Azure.
+Entre no portal do [`Azure`](https://portal.azure.com).
 
-Clique no botão `+ Create a resource`, pesquise **Azure AI Search** e crie um recurso Azure AI Search com as seguintes configurações:
+Clique no botão `+ Create a resource`, pesquise **Azure AI Search**.
+
+<div align="center">
+    <img width="700" title="MC01" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC01.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC02" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC02.PNG"/>
+</div>
+<br>
+
+Crie um recurso Azure AI Search com as seguintes configurações:
 
 - *Subscription*: Sua assinatura do Azure.
 - *Resource group*: Selecione ou crie um grupo de recursos com um nome exclusivo.
 - *Service name*: Um nome exclusivo em letra minúscula.
 - *Location*: Escolha qualquer região disponível.
 - *Pricing tier*: Básico
+
+<div align="center">
+    <img width="700" title="MC03" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC03.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC04" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC04.PNG"/>
+</div>
+<br>
+
 Clique em `Review + create` e depois de ver a resposta **Validation Success**, clique em `Create`.
+
+<div align="center">
+    <img width="700" title="MC05" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC05.PNG"/>
+</div>
+<br>
 
 Após a conclusão da implantação, clique em `Go to resource`.
 
+<div align="center">
+    <img width="700" title="MC06" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC06.PNG"/>
+</div>
+<br>
+
+
 ## Crie um recurso de serviços de IA do Azure
-Retorne à página inicial do portal do Azure. Clique em ```＋Create a resource``` e pesquise por **Azure AI services**. Clique em criar um plano de **Azure AI services**. Configure-o da seguinte maneira:
+Retorne à página inicial do portal do [`Azure`](https://portal.azure.com). Clique em `＋Create a resource` e pesquise por **Azure AI services**. Clique em criar um plano de **Azure AI services**. 
+
+<div align="center">
+    <img width="700" title="MC07" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC07.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC08" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC08.PNG"/>
+</div>
+<br>
+
+Configure-o da seguinte maneira:
 - *Subscription*: Sua assinatura do Azure.
 - *Resource group*: O mesmo grupo de recursos que seu recurso do Azure AI Search.
 - *Region*: O mesmo local do recurso do Azure AI Search.
 - *Name*: Um nome exclusivo.
 - *Pricing tier*: Padrão S0
 - *Marcar a caixa* **By checking this box I acknowledge that I have read and understood all the terms below**
-Clique em ```Review + create```. Depois de ver a resposta **Validation Passed**, clique em ```Create```.
+
+<div align="center">
+    <img width="700" title="MC09" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC09.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC10" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC10.PNG"/>
+</div>
+<br>
+
+Clique em `Review + create`. Depois de ver a resposta **Validation Passed**, clique em ```Create```.
+
+<div align="center">
+    <img width="700" title="MC11" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC11.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC12" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC12.PNG"/>
+</div>
+<br>
 
 
 ## Crie uma conta de armazenamento
-Retorne à página inicial do portal do Azure e clique em **+ Create a resource**.
+Retorne à página inicial do portal do [`Azure`](https://portal.azure.com), clique em `+ Create a resource` e procure por **Storage account**.
 
-Procure por **Storage account** e crie um novo com as seguintes configurações:
+<div align="center">
+    <img width="700" title="MC13" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC13.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC14" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC14.PNG"/>
+</div>
+<br>
+
+Crie um novo com as seguintes configurações:
 - *Subscription*: Sua assinatura do Azure.
 - *Resource group*: O mesmo grupo de recursos que os recursos do Azure AI Search e dos serviços Azure AI.
 - *Storage account name*: Um nome exclusivo em letras minúsculas.
 - *Location*: Escolha qualquer localização disponível.
 - *Performance*: Padrão.
 - *Redundancy*: Armazenamento localmente redundante (LRS).
-Clique em `Review + create` e em ```Create```.
 
-Na conta de Armazenamento do Azure criada, clique em ```Configuration```.
-Habilite a configuração **Allow Blob anonymous** e clique em ```Save```.
+<div align="center">
+    <img width="700" title="MC15" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC15.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC16" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC16.PNG"/>
+</div>
+<br>
+
+Clique em `Review + create` e em `Create`.
+
+<div align="center">
+    <img width="700" title="MC17" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC17.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC18" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC18.PNG"/>
+</div>
+<br>
+
+Na conta de Armazenamento do Azure criada, clique em `Configuration`, habilite a configuração **Allow Blob anonymous** e clique em `Save`.
+
+<div align="center">
+    <img width="700" title="MC19" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC19.PNG"/>
+</div>
+<br>
+
 
 ## Carregar documentos para o armazenamento do Azure
-No painel do menu esquerdo, clique em ```Containers```.
+No painel do menu esquerdo, clique em **Containers**.
 
-Clique em ```+ Container```. Insira as seguintes configurações e clique em ```Create```:
+Clique em `+ Container`. Insira as seguintes configurações e clique em `Create`:
 - *Name*: coffee-reviews
 - *Public access level*: Container (acesso de leitura anônimo para containers e blobs)
 - *Advanced*: sem alterações.
+
+<div align="center">
+    <img width="700" title="MC20" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC20.PNG"/>
+</div>
+<br>
+
 Em uma nova guia do navegador, baixe as avaliações de café compactadas em ```https://aka.ms/mslearn-coffee-reviews```, e extraia os arquivos para a pasta de reviews.
 
-No portal do Azure, selecione o contêiner **coffee-reviews**. No contêiner, clique em ```Upload```.
+No portal do [`Azure`](https://portal.azure.com), selecione o contêiner **coffee-reviews**. No contêiner, clique em `Upload`.
 
-No painel **Upload blob**, clique em ```Select a file```.
+<div align="center">
+    <img width="700" title="MC21" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC21.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC22" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC22.PNG"/>
+</div>
+<br>
 
-Na janela do Explorer, selecione todos os arquivos na pasta de avaliações, clique em ```Open``` e, em seguida, ```Upload```.
+No painel **Upload blob**, clique em `Select a file`.
+
+Na janela do Explorer, selecione todos os arquivos na pasta de avaliações, clique em `Open` e, em seguida, `Upload`.
 
 Após o upload concluir, feche o painel **Upload blob**.
 
+<div align="center">
+    <img width="700" title="MC23" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC23.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC24" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC24.PNG"/>
+</div>
+<br>
+
 ## Indexar os documentos
-No portal do Azure, navegue até o recurso Azure AI Search. Na página **Overview**, clique em ```Import data```.
+No portal do [`Azure`](https://portal.azure.com), navegue até o recurso **Azure AI Search**. Na página **Overview**, clique em `Import data`.
+
+<div align="center">
+    <img width="700" title="MC25" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC25.PNG"/>
+</div>
+<br>
 
 Na página **Connect to your data**, na lista **Data Source**, clique em ```Azure Blob Storage``` e preencha da seguinte forma:
 - *Data Source*: Azure Blob Storage
@@ -79,7 +203,29 @@ Na página **Connect to your data**, na lista **Data Source**, clique em ```Azur
 - *Blob folder*: Deixe em branco.
 - *Description*: Reviews for Fourth Coffee shops.
 
+<div align="center">
+    <img width="700" title="MC26" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC26.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC27" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC27.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC28" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC28.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC29" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC29.PNG"/>
+</div>
+<br>
+
 Clique em ```Next: Add cognitive skills (Optional)```.
+
+<div align="center">
+    <img width="700" title="MC30" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC30.PNG"/>
+</div>
+<br>
 
 Selecione o recurso de serviços Azure AI e na seção **Add enrichments**:
 - Altere o nome da qualificação para **coffee-skillset**.
@@ -87,6 +233,11 @@ Selecione o recurso de serviços Azure AI e na seção **Add enrichments**:
 - O campo **Source data field** deve estar configurado como **merged_content**.
 - Altere o nível de granularidade de enriquecimento para **Pages (5000 character chunks)**.
 - Não selecione *Enable incremental enrichment*
+
+<div align="center">
+    <img width="700" title="MC31" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC31.PNG"/>
+</div>
+<br>
 
 Selecione os seguintes campos:
 Habilidade Cognitiva	Nome do campo
@@ -119,11 +270,11 @@ Clique em ```Next: Customize target index``` e no campo **Index name** preencha 
 Certifique-se de que a chave esteja configurada como **metadata_storage_path**. Deixe **Suggester name** em branco e **Search mode** preenchido automaticamente.
 
 
-Revise as configurações padrão dos campos de índice. Selecione filterable para todos os campos que já estão selecionados por padrão.
+Revise as configurações padrão dos campos de índice. Selecione **filterable** para todos os campos que já estão selecionados por padrão.
 
 
 
-Clique em ```Next: Create an indexer```.
+Clique em `Next: Create an indexer`.
 
 Altere o nome do indexador para **coffee-indexer**.
 
@@ -133,7 +284,7 @@ Expanda as opções avançadas. Certifique-se de que a opção **Base-64 Encode 
 
 Clique em ```Submit```. 
 
-Volte à página de recursos do Azure AI Search. Em **Search Management**, clique em ```Indexers``` e **coffee-indexer**. Espere até que o status indique sucesso ou clique em ```Refresh```.
+Volte à página de recursos do **Azure AI Search**. Em **Search Management**, clique em ```Indexers``` e **coffee-indexer**. Espere até que o status indique sucesso ou clique em ```Refresh```.
 
 ## Consultar o índice
 Na página **Overview** do Search service, clique em ```Search explorer```.
@@ -173,27 +324,27 @@ Clique em ```Search```. A consulta irá filtrar 7 revisões com sentimento posit
 Veja como os resultados são classificados por @search.score. Esta é a pontuação atribuída pelo mecanismo de pesquisa para mostrar o quão próximos os resultados correspondem à consulta fornecida.
 
 ## Revise o armazenamento de conhecimento
-No portal do Azure, navegue de volta para a sua conta de armazenamento do Azure.
+No portal do [`Azure`](https://portal.azure.com), navegue de volta para a sua conta de armazenamento do Azure.
 
 No menu esquerdo, clique em ```Containers```. Selecione o contêiner **knowledge-store**.
 
 Selecione qualquer um dos itens e clique no arquivo **objectprojection.json**.
 
-Clique em ```Edit``` para ver o JSON produzido para um dos documentos do seu armazenamento de dados do Azure.
+Clique em `Edit` para ver o JSON produzido para um dos documentos do seu armazenamento de dados do Azure.
 
 Retornando em **Containers**, clique no contêiner **coffee-skillset-image-projection**. Selecione qualquer um dos itens e qualquer um dos arquivos *.jpg*. Clique em ```Edit``` para ver a imagem armazenada no documento.
 
 Selecione a localização atual do blob de armazenamento no canto superior esquerdo da tela para retornar à conta de armazenamento **Containers**.
 
-Clique em **Storage browser** no painel esquerdo e selecione **Tables**. Há uma tabela para cada entidade no índice. Selecione a tabela **coffeeSkillsetKeyPhrases** e observe as frases-chave que o armazenamento de conhecimento conseguiu capturar do conteúdo das avaliações.
+Clique em **Storage browser** no painel esquerdo e clique em **Tables**. Há uma tabela para cada entidade no índice. Selecione a tabela **coffeeSkillsetKeyPhrases** e observe as frases-chave que o armazenamento de conhecimento conseguiu capturar do conteúdo das avaliações.
 
 
 ## Links utilizados
 
-- <https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/11-ai-search.html>
+- https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/11-ai-search.html
 
-- (https://portal.azure.com)
+- https://portal.azure.com
 
-- (https://learn.microsoft.com/pt-br/azure/search/search-what-is-azure-search)
+- https://learn.microsoft.com/pt-br/azure/search/search-what-is-azure-search
 
 
