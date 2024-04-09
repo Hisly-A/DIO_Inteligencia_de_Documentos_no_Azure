@@ -62,7 +62,7 @@ Retorne à página inicial do portal do [`Azure`](https://portal.azure.com). Cli
 </div>
 <br>
 <div align="center">
-    <img width="700" title="MC08" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC08.PNG"/>
+    <img width="500" title="MC08" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC08.PNG"/>
 </div>
 <br>
 
@@ -103,7 +103,7 @@ Retorne à página inicial do portal do [`Azure`](https://portal.azure.com), cli
 </div>
 <br>
 <div align="center">
-    <img width="700" title="MC14" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC14.PNG"/>
+    <img width="500" title="MC14" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC14.PNG"/>
 </div>
 <br>
 
@@ -184,6 +184,7 @@ Após o upload concluir, feche o painel **Upload blob**.
 </div>
 <br>
 
+
 ## Indexar os documentos
 No portal do [`Azure`](https://portal.azure.com), navegue até o recurso **Azure AI Search**. Na página **Overview**, clique em `Import data`.
 
@@ -240,56 +241,115 @@ Selecione o recurso de serviços Azure AI e na seção **Add enrichments**:
 <br>
 
 Selecione os seguintes campos:
-Habilidade Cognitiva	Nome do campo
-Extraia nomes de locais	 	Localizações
-Extraia frases-chave	 	frases chave
-Detectar sentimento	 	sentimento
-Gerar tags de imagens	 	imagemTags
-Gere legendas de imagens	 	legenda da imagem
+
+<div align="center">
+    <img width="700" title="MC32" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC32.PNG"/>
+</div>
+<br>
 
 Em **Save enrichments to a knowledge store**, selecione as opções destacadas na imagem abaixo:
-Projeções de imagem
-Documentos
-Páginas
-Frases chave
-Entidades
-Detalhes da imagem
-Referências de imagem
 
-Se aparecer um aviso solicitando uma **Storage Account Connection String**, clique em **Select Choose an existing connection**. 
+<div align="center">
+    <img width="700" title="MC34" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC34.PNG"/>
+</div>
+<br>
+
+Se aparecer um aviso solicitando uma **Storage Account Connection String**, clique em **Choose an existing connection**. 
+
+<div align="center">
+    <img width="700" title="MC49" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC49.PNG"/>
+</div>
+<br>
 
 Escolha a conta de armazenamento criada anteriormente.
+
+<div align="center">
+    <img width="700" title="MC50" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC50.PNG"/>
+</div>
+<br>
+
 Clique em **+ Container** para criar um novo contêiner chamado **knowledge-store** com o nível de privacidade definido como **Private**, e clique em **Create**.
 
-Selecione o contêiner knowledge-store, e clique em `Select`.
+<div align="center">
+    <img width="700" title="MC51" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC51.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC52" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC52.PNG"/>
+</div>
+<br>
 
-Em **Azure blob projections** selecione **Documento**.
+Selecione o contêiner **knowledge-store**, e clique em `Select`.
 
-Clique em ```Next: Customize target index``` e no campo **Index name** preencha **coffee-index**.
+<div align="center">
+    <img width="700" title="MC53" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC53.PNG"/>
+</div>
+<br>
+
+Em **Azure blob projections** selecione **Documento** e clique em `Next: Customize target index` :
+
+<div align="center">
+    <img width="700" title="MC54" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC54.PNG"/>
+</div>
+<br>
+
+No campo **Index name** preencha **coffee-index**.
 
 Certifique-se de que a chave esteja configurada como **metadata_storage_path**. Deixe **Suggester name** em branco e **Search mode** preenchido automaticamente.
 
+<div align="center">
+    <img width="700" title="MC37" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC37.PNG"/>
+</div>
+<br>
 
-Revise as configurações padrão dos campos de índice. Selecione **filterable** para todos os campos que já estão selecionados por padrão.
+Selecione **filterable** para todos os campos que já estão selecionados por padrão e após clique em `Next: Create an indexer`.
 
-
-
-Clique em `Next: Create an indexer`.
+<div align="center">
+    <img width="700" title="MC38" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC38.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC39" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC39.PNG"/>
+</div>
+<br>
 
 Altere o nome do indexador para **coffee-indexer**.
 
 Deixe a programação definida como **Once**.
 
-Expanda as opções avançadas. Certifique-se de que a opção **Base-64 Encode Keys** esteja selecionada, pois as chaves de codificação podem tornar o índice mais eficiente.
+Expanda as opções avançadas. Certifique-se de que a opção **Base-64 Encode Keys** esteja selecionada, pois as chaves de codificação podem tornar o índice mais eficiente. Clique em ```Submit```. 
 
-Clique em ```Submit```. 
+<div align="center">
+    <img width="700" title="MC40" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC40.PNG"/>
+</div>
+<br>
 
 Volte à página de recursos do **Azure AI Search**. Em **Search Management**, clique em ```Indexers``` e **coffee-indexer**. Espere até que o status indique sucesso ou clique em ```Refresh```.
+
+<div align="center">
+    <img width="700" title="MC41" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC41.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC42" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC42.PNG"/>
+</div>
+<br>
+
 
 ## Consultar o índice
 Na página **Overview** do Search service, clique em ```Search explorer```.
 
+<div align="center">
+    <img width="700" title="MC43" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC43.PNG"/>
+</div>
+<br>
+
 Abaixo do índice selecionado, altere a visualização para **JSON view**.
+
+<div align="center">
+    <img width="700" title="MC44" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC44.PNG"/>
+</div>
+<br>
 
 No campo do editor de consultas JSON, copie e cole:
 ```
@@ -299,7 +359,12 @@ No campo do editor de consultas JSON, copie e cole:
 }
 ```
 
-Clique em ```Search```. A consulta retorna uma contagem de todos os documentos no campo **@odata.count** e um documento JSON contendo os resultados da pesquisa.
+Clique em ```Search```. A consulta retorna uma contagem de todos os documentos no campo *@odata.count* e um documento [`JSON`](https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/Todos_os_documentos.json) contendo os resultados da pesquisa.
+
+<div align="center">
+    <img width="700" title="MC45" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC45.PNG"/>
+</div>
+<br>
 
 No campo do editor de consultas JSON , copie e cole para filtrar por localização:
 ```
@@ -309,7 +374,12 @@ No campo do editor de consultas JSON , copie e cole para filtrar por localizaç�
 }
 ```
 
-Clique em ```Search```. A consulta irá filtrar 3 revisões com localização em Illinois no campo **@odata.count**.
+Clique em ```Search```. A consulta irá filtrar 3 revisões com localização em Illinois no campo *@odata.count*.
+
+<div align="center">
+    <img width="700" title="MC46" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC46.PNG"/>
+</div>
+<br>
 
 Para filtrar por sentimento, no campo do editor de consultas JSON , copie e cole:
 ```
@@ -319,24 +389,78 @@ Para filtrar por sentimento, no campo do editor de consultas JSON , copie e cole
 }
 ```
 
-Clique em ```Search```. A consulta irá filtrar 7 revisões com sentimento positivo no campo **@odata.count**.
+Clique em ```Search```. A consulta irá filtrar 7 revisões com sentimento positivo no campo *@odata.count*.
 
-Veja como os resultados são classificados por @search.score. Esta é a pontuação atribuída pelo mecanismo de pesquisa para mostrar o quão próximos os resultados correspondem à consulta fornecida.
+<div align="center">
+    <img width="700" title="MC47" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC47.PNG"/>
+</div>
+<br>
+
+Veja como os resultados são classificados por *@search.score*. Esta é a pontuação atribuída pelo mecanismo de pesquisa para mostrar o quão próximos os resultados correspondem à consulta fornecida.
+
+<div align="center">
+    <img width="700" title="MC48" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC48.PNG"/>
+</div>
+<br>
+
 
 ## Revise o armazenamento de conhecimento
 No portal do [`Azure`](https://portal.azure.com), navegue de volta para a sua conta de armazenamento do Azure.
 
 No menu esquerdo, clique em ```Containers```. Selecione o contêiner **knowledge-store**.
 
+<div align="center">
+    <img width="700" title="MC55" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC55.PNG"/>
+</div>
+<br>
+
 Selecione qualquer um dos itens e clique no arquivo **objectprojection.json**.
+
+<div align="center">
+    <img width="700" title="MC56" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC56.PNG"/>
+</div>
+<br>
 
 Clique em `Edit` para ver o JSON produzido para um dos documentos do seu armazenamento de dados do Azure.
 
+<div align="center">
+    <img width="700" title="MC57" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC57.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC58" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC58.PNG"/>
+</div>
+<br>
+
 Retornando em **Containers**, clique no contêiner **coffee-skillset-image-projection**. Selecione qualquer um dos itens e qualquer um dos arquivos *.jpg*. Clique em ```Edit``` para ver a imagem armazenada no documento.
 
-Selecione a localização atual do blob de armazenamento no canto superior esquerdo da tela para retornar à conta de armazenamento **Containers**.
+<div align="center">
+    <img width="700" title="MC59" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC59.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC60" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC60.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC61" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC61.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC62" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC62.PNG"/>
+</div>
+<br>
 
-Clique em **Storage browser** no painel esquerdo e clique em **Tables**. Há uma tabela para cada entidade no índice. Selecione a tabela **coffeeSkillsetKeyPhrases** e observe as frases-chave que o armazenamento de conhecimento conseguiu capturar do conteúdo das avaliações.
+Retorne à conta de armazenamento **Containers** e clique em **Storage browser** no painel esquerdo e clique em **Tables**. Há uma tabela para cada entidade no índice. Selecione a tabela **coffeeSkillsetKeyPhrases** e observe as frases-chave que o armazenamento de conhecimento conseguiu capturar do conteúdo das avaliações.
+
+<div align="center">
+    <img width="700" title="MC63" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC63.PNG"/>
+</div>
+<br>
+<div align="center">
+    <img width="700" title="MC64" src="https://github.com/Hisly-A/DIO_Inteligencia_de_Documentos_no_Azure/blob/main/outputs/MC64.PNG"/>
+</div>
+<br>
 
 
 ## Links utilizados
@@ -346,5 +470,3 @@ Clique em **Storage browser** no painel esquerdo e clique em **Tables**. Há uma
 - https://portal.azure.com
 
 - https://learn.microsoft.com/pt-br/azure/search/search-what-is-azure-search
-
-
